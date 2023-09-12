@@ -1,0 +1,11 @@
+Package: Polyspectra
+Type: Package
+Title: Compute polyspectral mean
+Version: 0.1.0
+Author: Dhrubajyoti Ghosh
+Maintainer: Dhrubajyoti Ghosh <dg302@duke.edu>
+Description: Compute spectral features
+License: MIT
+Encoding: UTF-8
+LazyData: true
+Imports: TSA, multitaper, rhosa
