@@ -76,7 +76,8 @@ spectral.Mean.Estimate = function(x, g, breaks){
 #' @examples
 
 bispectral.Mean.Estimate = function(x, g, breaks){
-  lambda = 2*pi*seq(-breaks, breaks, 1)/(2*breaks)  s = 0
+  lambda = 2*pi*seq(-breaks, breaks, 1)/(2*breaks)  
+  s = 0
   sc = NULL
   for(i in 1:length(lambda)){
     for(j in 1:length(lambda)){
