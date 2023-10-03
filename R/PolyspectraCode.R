@@ -61,7 +61,7 @@ spectral.Mean.Estimate = function(x, g, breaks){
   for(i in 1:length(lambda)){
     s = s + polyspectra.Estimate(x, lambda[i])*g(lambda[i])
   }
-  s = s / (length(x))
+  s = s / (length(lambda))
   return(Re(s))
 }
 
@@ -87,7 +87,7 @@ bispectral.Mean.Estimate = function(x, g, breaks){
       sc = c(sc, f)
     }
   }
-  s = s / (length(x)^2)
+  s = s / (length(lambda)^2)
   return(Re(s))
 }
 
