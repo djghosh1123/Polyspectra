@@ -55,8 +55,8 @@ polyspectra.Estimate = function(x, lambda){
 #'
 #' @examples
 
-spectral.Mean.Estimate = function(x, g){
-  lambda = 2*pi*seq(-floor(length(x)/2), floor(length(x)/2), 1)/length(x)
+spectral.Mean.Estimate = function(x, g, breaks){
+  lambda = 2*pi*seq(-breaks, breaks, 1)/(2*breaks)
   s = 0
   for(i in 1:length(lambda)){
     s = s + polyspectra.Estimate(x, lambda[i])*g(lambda[i])
@@ -75,9 +75,8 @@ spectral.Mean.Estimate = function(x, g){
 #'
 #' @examples
 
-bispectral.Mean.Estimate = function(x, g){
-  lambda = 2*pi*seq(-floor(length(x)/2), floor(length(x)/2), 1)/length(x)
-  s = 0
+bispectral.Mean.Estimate = function(x, g, breaks){
+  lambda = 2*pi*seq(-breaks, breaks, 1)/(2*breaks)  s = 0
   sc = NULL
   for(i in 1:length(lambda)){
     for(j in 1:length(lambda)){
